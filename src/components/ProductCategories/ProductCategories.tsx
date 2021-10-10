@@ -5,9 +5,9 @@ const ProductCategories = ({ categories }: IProductCategories) => {
   return (
     <ContentCategoriesStyled>
       {categories.map((category, index) => (
-        <article className="tag" key={`${category}-${index}`}>
+        <li className="tag" key={`${category}-${index}`}>
           {category}
-        </article>
+        </li>
       ))}
     </ContentCategoriesStyled>
   )

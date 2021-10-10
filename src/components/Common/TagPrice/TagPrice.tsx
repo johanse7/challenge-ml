@@ -6,8 +6,10 @@ const TagPrice = ({ price, decimals, currency, variantSize }: ITagPrice) => {
   const resultPrice = Math.trunc(price).toLocaleString(currency)
   return (
     <TagPriceStyled variant={variantSize}>
-      <span>$ {resultPrice}</span>
-      {decimals != undefined && <span className="decimals">{formatDecimals(decimals)}</span>}
+      <span>
+        $ {resultPrice}
+        {decimals != undefined && <sup className="decimals">{formatDecimals(decimals)}</sup>}
+      </span>
     </TagPriceStyled>
   )
 }

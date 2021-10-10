@@ -38,6 +38,7 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       template: "./public/index.html",
+      // favicon: "./src/theme/assets/images/favicon.ico",
     }),
   ],
 }

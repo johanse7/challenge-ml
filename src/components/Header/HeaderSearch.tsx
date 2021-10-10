@@ -1,4 +1,3 @@
-import { ISearch } from "../../interfaces/ISearch"
 import HeaderStyled from "./HeaderSearch.styled"
 import LogoStyled from "../../theme/common/Logo.styled."
 import { useHistory } from "react-router-dom"

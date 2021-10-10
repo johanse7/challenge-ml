@@ -5,10 +5,6 @@ import ProductDescription from "./ProductDescription"
 import ProductDetailStyled from "./ProductDetail.styled"
 
 const ProductDetail = ({ product }: IDetail) => {
-  const salesDescription = product?.sold_quantity
-    ? ` - ${product?.sold_quantity} vendidos`
-    : undefined
-
   return (
     <ProductDetailStyled>
       <section className="header-detail">
@@ -18,7 +14,7 @@ const ProductDetail = ({ product }: IDetail) => {
           classPlaceholder="place-holder-image-detail"
         />
         <BuyProduct
-          salesDescription={salesDescription}
+          sold_quantity={product?.sold_quantity}
           currency={product?.price?.currency}
           decimal={product?.price?.decimals}
           price={product?.price?.amount}

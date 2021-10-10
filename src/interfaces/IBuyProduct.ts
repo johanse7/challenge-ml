@@ -1,5 +1,5 @@
 export interface IBuyProduct {
-  salesDescription: string | undefined
+  sold_quantity: number
   title: string | undefined
   price: number | undefined
   currency: string | undefined

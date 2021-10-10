@@ -18,8 +18,6 @@ const TagPriceStyled = styled.div<{ variant: VariantTagPriceSize }>`
   & .decimals {
     font-size: 1rem;
     font-weight: 400;
-    position: absolute;
-    top: 5px;
   }
 
   ${({ variant }) => variantTag[variant]}

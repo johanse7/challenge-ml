@@ -15,4 +15,5 @@ export interface IProduct {
 export interface IProductDetail extends Omit<IProduct, "state_name"> {
   sold_quantity: number
   description: string
+  categories: Array<string>
 }

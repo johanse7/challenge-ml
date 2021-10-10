@@ -1,6 +1,8 @@
 import { useParams } from "react-router"
+import { Helmet } from "react-helmet"
 import ErrorHandler from "../components/Common/Error/ErrorHandler"
 import HeaderSearch from "../components/Header/HeaderSearch"
+import ProductCategories from "../components/ProductCategories"
 import ProductDetail from "../components/ProductDetail"
 import { TransactionCodeEnum } from "../enums/CommonEnum"
 import useProductDetail from "../hooks/useProductDetail"
@@ -16,11 +18,22 @@ const ProductDetailPage = () => {
     <>
       <HeaderSearch />
       <ContentPage>
+        {product?.categories && product.categories.length > 0 && (
+          <ProductCategories categories={product.categories} />
+        )}
         <MainContent>
           {notFoundData ? (
             <ErrorHandler code={TransactionCodeEnum.ok} message="Esta publicación no se encontró" />
           ) : (
-            <ProductDetail product={product} />
+            <>
+              {product && (
+                <Helmet>
+                  <title>{product.title} | Mercado Libre</title>
+                  <meta name="description" content={product.title} />
+                </Helmet>
+              )}
+              <ProductDetail product={product} />
+            </>
           )}
         </MainContent>
       </ContentPage>

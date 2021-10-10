@@ -26,7 +26,6 @@ const useProductDetail = (id: string) => {
           setFoundData(true)
           return
         }
-
         dispatch({ hasError: true, code: error.response?.status, message: Error_GNERAL })
       }
     })()

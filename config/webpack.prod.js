@@ -1,4 +1,3 @@
-const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 const { merge } = require("webpack-merge")
 const common = require("./webpack.common")
 
@@ -9,10 +8,9 @@ const prodConfig = {
   optimization: {
     splitChunks: {
       chunks: "all",
-      name: false,
     },
   },
-  // plugins: [new MiniCssExtractPlugin()],
+  performance: { hints: false },
 }
 
 module.exports = merge(common, prodConfig)

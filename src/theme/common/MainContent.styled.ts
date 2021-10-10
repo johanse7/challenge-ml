@@ -7,5 +7,5 @@ export const ContentPage = styled.main`
 export const MainContent = styled.section`
   background: ${({ theme }) => theme.palette.white};
   border-radius: 2px;
-  margin-top: 1rem;
+  margin: 1rem 0;
 `

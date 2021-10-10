@@ -1,4 +1,4 @@
-import { axiosInstance } from "../config/configAxios"
+import { axiosInstance } from "../config/ConfigAxios"
 import { IResponseProduct, IResponseProductList } from "../interfaces/IResponseProductService"
 
 export const getProductsByKeyWordSearch = async (search: string): Promise<IResponseProductList> => {
