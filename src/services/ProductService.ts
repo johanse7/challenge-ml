@@ -4,7 +4,7 @@ import { IResponseProduct, IResponseProductList } from "../interfaces/IResponseP
 export const getProductsByKeyWordSearch = async (search: string): Promise<IResponseProductList> => {
   const {
     data: { author, categories, items },
-  } = await axiosInstance.get<IResponseProductList>(`/api/items/${search}`)
+  } = await axiosInstance.get<IResponseProductList>(`/api/items?q=${search}`)
 
   return {
     author,
@@ -14,6 +14,6 @@ export const getProductsByKeyWordSearch = async (search: string): Promise<IRespo
 }
 
 export const getProductDetailById = async (id: string): Promise<IResponseProduct> => {
-  const { data } = await axiosInstance.get<IResponseProduct>(`/api/item/${id}`)
+  const { data } = await axiosInstance.get<IResponseProduct>(`/api/items/${id}`)
   return data
 }
