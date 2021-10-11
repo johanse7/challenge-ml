@@ -11,6 +11,7 @@ const ErrorHandlerStyled = styled.section`
     font-size: 1.5em;
     color: ${({ theme }) => theme.palette.black};
     font-weight: 600;
+    text-align: center;
   }
 
   & > button {

@@ -1,19 +1,20 @@
 # challenge Mercado Libre
- challenge-ml Mercado Libre Frontend.
- React and Typescript
 
+challenge-ml Mercado Libre Frontend.
+React and Typescript
 
 ### Pre-requisitos 📋
 
-Es necesario agregar las variables de entorno en un archivo (.env) en la raiz del proyecto. 
+Es necesario agregar las variables de entorno en un archivo (.env) en la raiz del proyecto.
 
 ```
-URL_BASE_API= 
-MAX_RESULTS=
+URL_BASE_API=
+MAX_SHOW_PRODUCTS=
 ```
+
 ### Instalación 🔧
 
-Instalar las dependecias por medio del comando:_
+Instalar las dependecias por medio del comando:\_
 
 ```
 npm install
@@ -26,7 +27,7 @@ Para iniciar la ejecución del proyecto en modo desarrollo se debe ejecutar el s
 ```
 npm run dev
 ```
-```
-url site: https://keen-almeida-4ee8e6.netlify.app/
-```
 
+```
+url site: https://webapp-challenge-ml.vercel.app
+```
